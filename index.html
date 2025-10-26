@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miner Clicker — Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <div id="topbar">
+      <div id="resources">
+        <div>Gold: <span id="gold">0</span></div>
+        <div>Ore: <span id="oreCount">0</span></div>
+      </div>
+      <div id="status">
+        <div>Pickaxe: <span id="pickaxeName">Bare Hands</span> (Lv <span id="pickaxeLevel">0</span>)</div>
+        <div>Mining Power: <span id="miningPower">1</span></div>
+      </div>
+      <div id="audioControls">
+        <label class="vol">SFX <input id="sfxVol" type="range" min="0" max="1" step="0.01" value="0.8"></label>
+        <label class="vol">Music <input id="musicVol" type="range" min="0" max="1" step="0.01" value="0.25"></label>
+        <button id="muteBtn">Mute</button>
+        <button id="musicToggle">Music On</button>
+      </div>
+    </div>
+    <div id="main">
+      <canvas id="gameCanvas" width="900" height="520"></canvas>
+      <div id="rightPanel">
+        <section class="panel" id="shop">
+          <h3>Shop</h3>
+          <div class="shop-section">
+            <h4>Pickaxes</h4>
+            <div id="pickaxeList"></div>
+          </div>
+          <div class="shop-section">
+            <h4>Helpers</h4>
+            <div id="helperList"></div>
+          </div>
+          <div class="shop-section">
+            <h4>Owned Helpers</h4>
+            <div id="ownedHelpers"></div>
+          </div>
+        </section>
+        <section class="panel" id="achievements">
+          <h3>Achievements</h3>
+          <ul id="achList"></ul>
+        </section>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="controls">
+        <button id="sellBtn">Sell Ore</button>
+        <button id="resetBtn">Reset (clear save)</button>
+      </div>
+      <div id="hints">Hover an ore to see tooltip. Tap to mine on mobile.</div>
+    </div>
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
